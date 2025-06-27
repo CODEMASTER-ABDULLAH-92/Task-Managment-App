@@ -6,7 +6,7 @@ import Navbar from "../Components/Navbar";
 import { useNavigate } from "react-router-dom";
 
 const Create = () => {
-  const { url } = useContext(ContextApi);
+  const { url ,fetchAllNotes} = useContext(ContextApi);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const navigate = useNavigate();
@@ -33,6 +33,7 @@ const Create = () => {
         setContent("");
         toast.success("Note added successfully!");
         navigate("/");
+        fetchAllNotes();
       } else {
         toast.error("Failed to add note.");
       }

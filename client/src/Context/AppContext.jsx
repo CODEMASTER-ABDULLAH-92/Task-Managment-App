@@ -10,7 +10,7 @@ export const ContextApi = createContext();
 const ContextProvider = (props) => {
   const url = "https://task-managment-app-backend.vercel.app";
   const [note, setNotes] = useState([]);
-  const [singleNote,setSingleNote] = useState("");
+
 
   // Fetch all notes from backend
   const fetchAllNotes = async () => {
