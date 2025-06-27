@@ -3,12 +3,13 @@ import React, { useContext, useState } from "react";
 import { ContextApi } from "../Context/AppContext";
 import { toast } from "react-hot-toast";
 import Navbar from "../Components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
   const { url } = useContext(ContextApi);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -31,6 +32,7 @@ const Create = () => {
         setTitle("");
         setContent("");
         toast.success("Note added successfully!");
+        navigate("/");
       } else {
         toast.error("Failed to add note.");
       }

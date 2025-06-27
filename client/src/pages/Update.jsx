@@ -76,7 +76,7 @@ const Update = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0f0f0f] text-white">
+    <div className="min-h-screen  text-white">
       {/* Navbar */}
       <div className="pt-10">
         <Navbar />
