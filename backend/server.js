@@ -11,7 +11,7 @@ import rateLimiter from "./middleware/rateLimiter.js";
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({origin: "https://task-managment-app-frontend.vercel.app/",credentials:true}));
+app.use(cors({origin: "https://task-managment-app-frontend.vercel.app",credentials:true}));
 app.use(morgan("dev"));
 
 
