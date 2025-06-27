@@ -8,7 +8,7 @@ export const ContextApi = createContext();
 
 // Provider Component
 const ContextProvider = (props) => {
-  const url = "http://localhost:8001";
+  const url = "https://task-managment-app-backend.vercel.app";
   const [note, setNotes] = useState([]);
   const [singleNote,setSingleNote] = useState("");
 
